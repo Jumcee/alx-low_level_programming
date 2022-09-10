@@ -1,39 +1,40 @@
 #include <stdio.h>
+#include <math.h>
 
 /**
- * main - entry point
+ * main - Entry point
  *
- * Return: Alway returns 0
+ * Return: Always 0 (Success)
  *
  */
 int main(void)
 {
-	int i;
-	int j;
+	int i, i2;
 
-	for (i = 0; i <= 99; i++)
+	i = 0;
+	while (i <= 98)
 	{
-		int i;
-		int j;
-
-		for (i = 0; i <= 99; i++)
+		i2 = i + 1;
+		while (i2 <= 99)
 		{
-			for (j = i + 1; j <= 99; j++)
+			putchar(i / 10 + '0');
+			putchar(i % 10 + '0');
+			putchar(' ');
+			putchar(i2 / 10 + '0');
+			putchar(i2 % 10 + '0');
+			if (i == 98 && i2 == 99)
 			{
-				putchar(i / 10 + '0');
-				putchar(i % 10 + '0');
-				putchar(' ');
-				putchar(j / 10 + '0');
-				putchar(j % 10 + '0');
-
-				if (!(i == 98 && j == 99))
-				{
-					putchar(',');
-					putchar(' ');
-				}
+				putchar('\n');
 			}
+			else
+			{
+				putchar(',');
+				putchar(' ');
+			}
+			i2++;
 		}
-		putchar('\n');
-		return (0);
+		i++;
 	}
+	return (0);
+}
 
