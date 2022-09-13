@@ -2,13 +2,14 @@
 
 /**
  * main - Entry point
- * Description: write a program that prints "_putchar" followed by a new line
- * Return: 0
+ *
+ * Return: Always returns 0
+ *
  */
 int main(void)
 {
 	_putchar('_');
-        _putchar('p');
+	_putchar('p');
 	_putchar('u');
 	_putchar('t');
 	_putchar('c');
