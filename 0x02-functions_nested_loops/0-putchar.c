@@ -1,9 +1,10 @@
 #include "main.h"
 
 /**
- * main - Entry point
+ * main - Entry point.
  *
- * Return: Alwahys 0 (Success)
+ * Return: Always returns 0
+ *
  */
 int main(void)
 {
