@@ -1,42 +1,44 @@
-#include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
 
 /**
- *  _atoi - converts a string to an integer.
- *  @s: pointer to string.
+ * main - random password generator for 101-crackme.
  *
- *  Return: integer gotten.
+ * Return: always 0
  */
 
-int _atoi(char *s)
+int main(void)
 {
-  int index, ind2;
-  unsigned int res;
-  int sign = 1;
-  char now;
+	int i, j, k, s;
+	char c[] = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+	char p[58];
 
-	index = 0;
-	res = 0;
-	while (*(s + index) != '\0')
+	srand(time(NULL));
+	while (s != 2772)
 	{
-		now = *(s + index);
-		if (now == '-')
+		i = k = s = 0;
+		while ((2772 - 122) > s)
 		{
-			sign *= -1;
+			j = rand() % 62;
+			p[i] = c[j];
+			s += c[j];
+			i++;
 		}
-		if (now >= '0' && now <= '9')
+		while (c[k])
 		{
-			ind2 = index;
-			while (*(s + ind2) > 47 && *(s + ind2) < 58)
+			if (c[k] == (2772 - s))
 			{
-				res = (res * 10) + *(s + ind2) - '0';
-				ind2++;
+				p[i] = c[k];
+				s += c[k];
+				i++;
+				break;
 			}
-			break;
+			k++;
 		}
-		index++;
 	}
-	if (sign < 0)
-		res *= sign;
-	return (res);
+	p[i] = '\0';
+	printf("%s", p);
+	return (0);
 }
+
