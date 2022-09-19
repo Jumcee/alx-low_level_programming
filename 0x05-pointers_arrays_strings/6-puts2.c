@@ -4,7 +4,7 @@
  * puts2 - prints very other character in string.
  * @str: pointer to string
  *
- * Return: void
+ * Return: void.
  */
 
 void puts2(char *str)
