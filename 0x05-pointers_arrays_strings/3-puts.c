@@ -1,20 +1,23 @@
 #include "main.h"
-#include "2-strlen.c"
 
 /**
- * _puts - puts a string
+ * _puts - prints string followed by newline
+ * @str: pointer to string
  *
- * @str: string to print
+ * Return: void.
  */
 
 void _puts(char *str)
 {
 	int i;
 
-	for (i = 0; *(str + i) != '\0'; i++)
+	i = 0;
+	while (*str != '\0')
 	{
-		_putchar(*(str + i));
+		_putchar(*str);
+		i++;
+		str++;
 	}
-	 _putchar('\n');
+	_putchar('\n');
 }
 
