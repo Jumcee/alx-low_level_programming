@@ -6,7 +6,6 @@
  *
  * Return: void.
  */
-
 void print_rev(char *s)
 {
 	int length, last;
