@@ -2,18 +2,18 @@
 #include <stdio.h>
 
 /**
- * _atoi - converts a string to an integer.
- * @s: pointer to string.
+ *  _atoi - converts a string to an integer.
+ *  @s: pointer to string.
  *
- * Return: integer gotten.
+ *  Return: integer gotten.
  */
 
 int _atoi(char *s)
 {
-	int index, ind2;
-	unsigned int res;
-	int sign = 1;
-	char now;
+  int index, ind2;
+  unsigned int res;
+  int sign = 1;
+  char now;
 
 	index = 0;
 	res = 0;
@@ -40,4 +40,3 @@ int _atoi(char *s)
 		res *= sign;
 	return (res);
 }
-
