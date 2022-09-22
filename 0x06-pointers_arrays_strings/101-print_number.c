@@ -1,46 +1,35 @@
 #include "main.h"
 
 /**
- * print_number - prints number
- * @n:integer to convert to character
- *
+ * print_number - prints an integer.
+ * @n: input integer.
+ * Return: no return.
  */
 
 void print_number(int n)
 {
-	unsigned int abs;
-	int mult = 1;
-	unsigned int abSCount;
-	int i;
-	int c = 0;
-
-	if (n == 0)
+	unsigned int m, d, count;
 	{
-		_putchar('0');
+		_putchar(45);
+		m = n * -1;
 	}
-	if (n < 0)
+	else
 	{
-		_putchar('-');
-		n += 1;
-		n *= -1;
-		n++
+		m = n;
 	}
-	abs = n;
-	abSCount = n;
 
-	while (abSCount > 0)
+	d = m;
+	count = 1;
+
+	while (d > 9)
 	{
-		abSCount /= 10;
-		c++
+		d /= 10;
+		count *= 10;
 	}
-	for (i = 0; i < c - 1; i++)
-		mult *= 10;
 
-	for (i = 0; i < c; i++)
+	for (; count >= 1; count /= 10)
 	{
-		_putchar((abs / mult) + '0');
-		abs = abs % mult;
-		mult /= 10;
+		_putchar(((m / count) % 10) + 48);
 	}
 }
 
